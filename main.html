@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚡ Danish · Potter CV</title>
+  <!-- Google Fonts: magical & clean -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0a0e14;
+      background-image: radial-gradient(circle at 30% 20%, #1a212b, #07090e 90%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Quicksand', sans-serif;
+      padding: 2rem 1rem;
+    }
+
+    /* main parchment – hogwarts letter style */
+    .campus {
+      max-width: 1150px;
+      width: 100%;
+      background: #f4ecdd;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><rect width="120" height="120" fill="%23f4ecdd" opacity="0.1"/><path d="M15 15 L 105 15 L 105 105 L 15 105 Z" stroke="%23cbb295" stroke-width="2" fill="none" opacity="0.3"/></svg>');
+      border-radius: 48px 48px 32px 32px;
+      padding: 2.8rem 2.2rem;
+      box-shadow: 0 30px 50px rgba(0,0,0,0.9), 0 0 0 2px #b89b7b, 0 0 0 6px #2d241c;
+      position: relative;
+      animation: floatGlow 7s infinite alternate ease-in-out;
+      transition: 0.2s;
+    }
+
+    @keyframes floatGlow {
+      0% { box-shadow: 0 30px 50px rgba(0,0,0,0.9), 0 0 0 2px #b89b7b, 0 0 0 6px #2d241c, 0 0 20px #b48b5a; }
+      100% { box-shadow: 0 45px 70px rgba(0,0,0,0.95), 0 0 0 2px #dbbd9a, 0 0 0 6px #3d2e22, 0 0 45px #e1b785; }
+    }
+
+    /* header */
+    .hogwarts-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border-bottom: 3px dashed #b59a78;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .magic-title {
+      font-family: 'MedievalSharp', cursive;
+      font-size: 2.6rem;
+      letter-spacing: 2px;
+      color: #2c1f13;
+      text-shadow: 3px 3px 0 #cfb697, 0 0 15px #b48b5a;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .magic-title span {
+      background: #1e2a36;
+      color: #ecdcc0;
+      font-size: 1.8rem;
+      padding: 0 1.2rem;
+      border-radius: 60px;
+      box-shadow: inset 0 0 8px #b99d7a;
+    }
+
+    .owl-badge {
+      background: #2b2a1e;
+      padding: 0.5rem 1.8rem;
+      border-radius: 60px;
+      color: #e9dccd;
+      font-weight: 600;
+      border: 2px solid #b79b72;
+      box-shadow: 0 0 15px #c9a87c;
+      font-family: 'MedievalSharp', cursive;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      animation: flicker 2.4s infinite;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 0.9; box-shadow: 0 0 5px #c9a87c; }
+      50% { opacity: 1; box-shadow: 0 0 30px #eac394; }
+      100% { opacity: 0.9; box-shadow: 0 0 5px #c9a87c; }
+    }
+
+    /* grid */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.2fr 1.8fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: 800px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+      }
+    }
+
+    /* left panel */
+    .profile-side {
+      background: rgba(44, 35, 28, 0.55);
+      backdrop-filter: blur(3px);
+      padding: 1.8rem 1.2rem;
+      border-radius: 40px 12px 40px 12px;
+      border: 1px solid #cbb295;
+      box-shadow: inset 0 0 30px #3d2d1c, 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    .profile-side h3 {
+      font-family: 'MedievalSharp', cursive;
+      color: #fbebb2;
+      background: #2d241c;
+      display: inline-block;
+      padding: 0.3rem 1.8rem;
+      border-radius: 40px;
+      letter-spacing: 2px;
+      font-size: 1.6rem;
+      margin-bottom: 1.4rem;
+      border: 1px solid #b79b72;
+      box-shadow: 0 0 15px #9f855f;
+    }
+
+    .info-line {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      color: #f5e7d3;
+      padding: 0.5rem 0.2rem;
+      border-bottom: 1px dashed #776244;
+      font-size: 0.98rem;
+      flex-wrap: wrap;
+    }
+
+    .info-line strong {
+      min-width: 90px;
+      color: #f7e5c2;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    .info-line i {
+      color: #d6b587;
+      margin-right: 6px;
+    }
+
+    .personal-qualities {
+      margin-top: 1.8rem;
+    }
+
+    .badge-lang {
+      background: #2c241b;
+      border-radius: 60px;
+      padding: 0.4rem 1rem;
+      color: #efe6d4;
+      border-left: 6px solid #b08b5e;
+      margin: 0.6rem 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* right side */
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    .parchment-box {
+      background: #efe3cf;
+      padding: 1.4rem 1.8rem;
+      border-radius: 30px 8px 30px 8px;
+      border: 1px solid #c8af8b;
+      box-shadow: inset 0 0 20px #dac6ac, 0 8px 15px rgba(0,0,0,0.2);
+      transition: 0.25s;
+    }
+
+    .parchment-box:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 30px #c9a87c, inset 0 0 20px #dac6ac;
+    }
+
+    .parchment-box h4 {
+      font-family: 'MedievalSharp', cursive;
+      font-size: 1.7rem;
+      color: #2f1f0e;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 2px solid #b79b72;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .parchment-box h4 i {
+      font-size: 1.9rem;
+      color: #836b47;
+    }
+
+    .edu-item {
+      margin-bottom: 0.7rem;
+      border-left: 4px solid #b48b5a;
+      padding-left: 1rem;
+    }
+
+    .edu-item strong {
+      color: #3a2a17;
+      font-size: 1.2rem;
+    }
+
+    .chip-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.7rem;
+      margin-top: 0.3rem;
+    }
+
+    .chip {
+      background: #3b2d1f;
+      color: #f2e1c7;
+      padding: 0.15rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 1px solid #b29269;
+      box-shadow: 0 0 6px #b49163;
+    }
+
+    .skill-badge {
+      background: #2e261c;
+      color: #efe0cb;
+      padding: 0.2rem 1.2rem;
+      border-radius: 40px;
+      border: 1px solid #a7875e;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    .reference-card {
+      background: #2f261b;
+      padding: 1rem 1.5rem;
+      border-radius: 30px 8px 30px 8px;
+      color: #f0e3cf;
+      border: 1px solid #b29167;
+      margin-top: 0.5rem;
+    }
+
+    .gold-medal {
+      background: #b48b3e;
+      color: #231f13;
+      font-weight: 700;
+      padding: 0.15rem 1.2rem;
+      border-radius: 40px;
+      display: inline-block;
+      border: 1px solid #f3d384;
+      box-shadow: 0 0 15px #ecc374;
+      animation: glowGold 2.2s infinite alternate;
+    }
+
+    @keyframes glowGold {
+      0% { box-shadow: 0 0 5px #ecc374; }
+      100% { box-shadow: 0 0 30px #f5d99b; }
+    }
+
+    .spell-animation {
+      animation: spellFlicker 3s infinite;
+    }
+
+    @keyframes spellFlicker {
+      0% { opacity: 0.9; text-shadow: 0 0 0 #dbbd9a; }
+      50% { opacity: 1; text-shadow: 0 0 20px #eac394, 0 0 10px #b48b5a; }
+      100% { opacity: 0.9; text-shadow: 0 0 0 #dbbd9a; }
+    }
+
+    .footer-magic {
+      margin-top: 2.2rem;
+      text-align: right;
+      font-family: 'MedievalSharp', cursive;
+      color: #4d3922;
+      border-top: 2px dotted #b39772;
+      padding-top: 1rem;
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+    }
+
+    .glow-star {
+      display: inline-block;
+      animation: starTwinkle 2.5s infinite alternate;
+    }
+
+    @keyframes starTwinkle {
+      0% { opacity: 0.4; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1.2); }
+    }
+
+    .project-item {
+      background: #dccdb6;
+      border-radius: 40px;
+      padding: 0.3rem 1.2rem;
+      margin: 0.3rem 0;
+      color: #1f160e;
+      font-weight: 500;
+      border-left: 5px solid #b08b5e;
+    }
+
+    @media (max-width: 500px) {
+      .magic-title { font-size: 1.8rem; flex-wrap: wrap; }
+      .owl-badge { font-size: 1rem; padding: 0.3rem 1rem; }
+      .campus { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="campus">
+
+  <!-- header -->
+  <div class="hogwarts-header">
+    <div class="magic-title">
+      <span>⚡</span> DANISH·POTTER <span style="font-size:1.8rem; background:none; box-shadow:none; color:#b48b5a;">✧</span>
+    </div>
+    <div class="owl-badge">
+      🦉 <span class="glow-star">★</span> ACCIO CV <span class="glow-star">★</span>
+    </div>
+  </div>
+
+  <!-- main grid -->
+  <div class="grid-2">
+
+    <!-- LEFT : contact & summary -->
+    <div class="profile-side">
+      <h3>🔮  PROFILE</h3>
+      
+      <div class="info-line"><i>🧙</i> <strong>Full name</strong> <span style="color:#f5e7d3;">Danish (from CV)</span></div>
+      <div class="info-line"><i>🎓</i> <strong>Degree</strong> B.Eng Computer Engineering (Hons.)</div>
+      <div class="info-line"><i>🏛️</i> <strong>UniMAP</strong> CGPA 3.78 · Oct 2021 - Aug 2025</div>
+      <div class="info-line"><i>📅</i> <strong>Internship</strong> Intel Technology Malaysia (Feb–Aug 2025)</div>
+      <div class="info-line"><i>🌐</i> <strong>Languages</strong> Malay, English</div>
+
+      <div class="personal-qualities">
+        <h3 style="font-size:1.3rem; background:#2d241c; padding:0.2rem 1.2rem;">🧪  SUMMARY</h3>
+        <div style="background:#1f1913; padding:0.8rem; border-radius:30px; color:#e6dccc; border:1px solid #a7875e; font-size:0.95rem; margin-top:0.3rem;">
+          A motivated Computer Engineering graduate with strong interests in software development, embedded systems, IoT, and AI. Eager to contribute and grow.
+        </div>
+        <div style="margin-top:1rem; color:#dccdb8; font-style:italic; text-align:center; border:1px solid #7f694a; border-radius:40px; padding:0.4rem; background:#201a13;">
+          ⚡ “Mischief managed” ⚡
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT : education, projects, skills, certs -->
+    <div class="main-content">
+
+      <!-- Education & experience -->
+      <div class="parchment-box">
+        <h4><i>📚</i> EDUCATION & INTEL</h4>
+        <div class="edu-item">
+          <strong>🏛️ Universiti Malaysia Perlis (UniMAP)</strong> <br>
+          <span style="color:#3a2a17;">Bachelor of Computer Engineering (Hons.) · CGPA 3.78</span> <br>
+          <span class="chip">Oct 2021 – Aug 2025</span>
+        </div>
+        <div style="margin-top:0.8rem; border-left:4px solid #b48b5a; padding-left:1rem;">
+          <strong>⚙️ Intel Technology Malaysia Sdn. Bhd. (Penang)</strong> <br>
+          <span style="color:#3a2a17;">Feb 2025 – Aug 2025 · Internship</span> <br>
+          <span class="skill-badge">Automated testing</span> <span class="skill-badge">Production data analysis</span> <span class="skill-badge">IoT predictive maintenance</span> <span class="skill-badge">Technical documentation</span>
+        </div>
+        <div style="margin-top:0.7rem;">
+          <span class="gold-medal">🏅 Dean's Award (Sem 2,4,6)</span>
+          <span class="gold-medal" style="margin-left:0.3rem;">🥇 Gold Medal · UniMAP Innovation 2024</span>
+        </div>
+      </div>
+
+      <!-- Projects & Certifications -->
+      <div class="parchment-box">
+        <h4><i>⚡</i> PROJECTS · SPELLS</h4>
+        <div class="project-item">📡 Smart Parking Monitoring – IoT (ESP32 + Firebase)</div>
+        <div class="project-item">🎓 Student Academic Guidance – PHP + MySQL</div>
+        <div class="project-item">🏠 Smart Home Automation – ESP8266 remote control</div>
+        <div style="margin-top:0.8rem;">
+          <span class="chip">Cisco Networking Essentials</span>
+          <span class="chip">Google Data Analytics</span>
+        </div>
+      </div>
+
+      <!-- Technical skills + Reference -->
+      <div class="parchment-box">
+        <h4><i>💻</i> SKILLS · TOOLS</h4>
+        <div class="chip-list">
+          <span class="chip">Python</span><span class="chip">Java</span><span class="chip">C++</span>
+          <span class="chip">JavaScript</span><span class="chip">HTML/CSS</span>
+          <span class="chip">GitHub</span><span class="chip">VS Code</span><span class="chip">Arduino IDE</span>
+          <span class="chip">MATLAB</span><span class="chip">Proteus</span><span class="chip">ESP32/8266</span>
+          <span class="chip">Arduino Uno</span><span class="chip">Raspberry Pi</span>
+          <span class="chip">MySQL</span><span class="chip">Firebase</span>
+        </div>
+
+        <div style="margin-top:1.5rem;">
+          <h4 style="font-size:1.2rem; border-bottom:1px solid #b89b7b; padding-bottom:0.2rem;"><i>📜</i> REFERENCE · OWL</h4>
+          <div class="reference-card spell-animation">
+            <strong>Ts. Dr. Ahmad Faizal Bin Mohd Noor</strong> <br>
+            Senior Lecturer, School of Computer Engineering, UniMAP <br>
+            ✉️ faizal@unimap.edu.my
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- end main-content -->
+  </div> <!-- end grid -->
+
+  <!-- footer -->
+  <div class="footer-magic">
+    <span style="display:inline-block; animation: spellFlicker 2.5s infinite;">✧</span> 
+    <span style="display:inline-block; animation: spellFlicker 3s infinite 0.5s;">DANISH · COMPUTER ENGINEER</span> 
+    <span style="display:inline-block; animation: spellFlicker 2s infinite 0.8s;">✧</span> 
+    <span style="font-size:1rem; font-family:'Quicksand', sans-serif; background:#2d241c; color:#e9dccc; padding:0 1.2rem; border-radius:60px;">⚡ 2026 · always ⚡</span>
+  </div>
+
+</div> <!-- end campus -->
+</body>
+</html>
