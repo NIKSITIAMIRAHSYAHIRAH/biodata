@@ -379,6 +379,47 @@
       box-shadow: 0 0 20px #0a66c2;
     }
 
+    .ongoing-badge {
+      background: #6b5a44;
+      color: #f5e7d3;
+      padding: 0.1rem 1rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: 1px solid #b89b7b;
+      margin-left: 0.5rem;
+      animation: sparkle 2s infinite alternate;
+    }
+
+    @keyframes sparkle {
+      0% { box-shadow: 0 0 5px #eac394; }
+      100% { box-shadow: 0 0 20px #f5d99b, 0 0 40px rgba(225, 183, 133, 0.3); }
+    }
+
+    .skills-section {
+      margin-top: 0.5rem;
+    }
+
+    .skills-section .skill-group {
+      margin-bottom: 0.8rem;
+    }
+
+    .skills-section .skill-group-title {
+      font-weight: 600;
+      color: #3a2a17;
+      font-size: 0.95rem;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    /* make current education standout */
+    .edu-current {
+      border-left: 4px solid #b48b3e;
+      background: rgba(180, 139, 62, 0.08);
+      padding-left: 1rem;
+      border-radius: 0 8px 8px 0;
+    }
+
     @media (max-width: 500px) {
       .magic-title { font-size: 1.8rem; flex-wrap: wrap; }
       .owl-badge { font-size: 1rem; padding: 0.3rem 1rem; }
@@ -440,30 +481,38 @@
     <!-- RIGHT : education, experience, skills, awards -->
     <div class="main-content">
 
-      <!-- Education (CGPA removed, added UniMAP) -->
+      <!-- EDUCATION - current on top with ⚡ Ongoing (no date) -->
       <div class="parchment-box">
         <h4><i>📚</i> EDUCATION</h4>
-        <div class="edu-item">
+        
+        <!-- Current Education - Ongoing (no 2024-current) -->
+        <div class="edu-item edu-current">
           <strong>🏛️ Universiti Malaysia Perlis (UniMAP)</strong> <br>
-          <span style="color:#3a2a17;">ELECTRONIC SYSTEM, Electrical and Electronics Engineering</span> <br>
-          <span class="chip">2024 – current</span>
+          <span style="color:#3a2a17;">ELECTRONIC SYSTEM, Electrical and Electronics Engineering</span>
+          <span class="ongoing-badge">⚡ Ongoing</span>
         </div>
+
+        <!-- Polytechnic -->
         <div class="edu-item">
           <strong>🏛️ Seberang Perai Polytechnic</strong> <br>
           <span style="color:#3a2a17;">Electronic Engineering (Communication)</span> <br>
           <span class="chip">Permatang Pauh, Penang</span>
         </div>
+
+        <!-- Secondary School -->
         <div class="edu-item">
           <strong>🏫 SMK Pekula Jaya</strong> <br>
           <span style="color:#3a2a17;">SPM · Average</span> <span class="chip">Tikam Batu, Kedah</span>
         </div>
+
+        <!-- Awards -->
         <div style="margin-top:0.7rem;">
           <span class="gold-medal">🏅 Gold Medal · Shoe Rack Innovation (2018)</span>
           <span class="gold-medal" style="margin-left:0.3rem;">🥈 NILAM Silver (2014)</span>
         </div>
       </div>
 
-      <!-- WORK EXPERIENCE - Motorola Solutions -->
+      <!-- WORK EXPERIENCE -->
       <div class="parchment-box">
         <h4><i>⚙️</i> WORK EXPERIENCE</h4>
         
@@ -493,34 +542,51 @@
         </div>
       </div>
 
-      <!-- Extra Curricular & Skills -->
+      <!-- SKILLS SECTION -->
       <div class="parchment-box">
-        <h4><i>⚡</i> EXTRA · SKILLS</h4>
-        <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.8rem;">
-          <span class="skill-badge">🍽️ Dining Committee · Chess (2018)</span>
-          <span class="skill-badge">🪄 Safety & Health Course (2020)</span>
-          <span class="skill-badge">🏃 1Muird 1Sukan 1Malaysia (2011)</span>
-          <span class="skill-badge">👥 Youth House Committee (2010)</span>
-          <span class="skill-badge">📖 Arab Language Committee (2010)</span>
-        </div>
-        <div>
-          <span class="chip">Creative & Innovation Club</span>
-        </div>
-        <div style="margin-top:0.8rem;">
-          <strong style="color:#3a2a17;">🔧 Technical Skills:</strong>
-          <div class="chip-list">
-            <span class="chip">Electrical Wiring</span>
-            <span class="chip">RF Testing</span>
-            <span class="chip">Electrical Testing</span>
-            <span class="chip">Troubleshooting</span>
-            <span class="chip">Soldering</span>
-            <span class="chip">PCBA</span>
-            <span class="chip">Microsoft Office</span>
-            <span class="chip">Arduino</span>
-            <span class="chip">MATLAB</span>
-            <span class="chip">Cisco Packet Tracer</span>
-            <span class="chip">AutoCAD 2014</span>
-            <span class="chip">Proteus</span>
+        <h4><i>🔧</i> SKILLS · TOOLS</h4>
+        
+        <div class="skills-section">
+          <!-- Hardware & Engineering -->
+          <div class="skill-group">
+            <span class="skill-group-title">⚡ Hardware & Engineering</span>
+            <div class="chip-list">
+              <span class="chip">Electrical Wiring</span>
+              <span class="chip">RF Testing</span>
+              <span class="chip">Electrical Testing</span>
+              <span class="chip">Troubleshooting</span>
+              <span class="chip">Soldering</span>
+              <span class="chip">PCBA</span>
+              <span class="chip">Arduino</span>
+              <span class="chip">MATLAB</span>
+              <span class="chip">Proteus</span>
+            </div>
+          </div>
+
+          <!-- Software & Tools -->
+          <div class="skill-group">
+            <span class="skill-group-title">💻 Software & Tools</span>
+            <div class="chip-list">
+              <span class="chip">Microsoft Word</span>
+              <span class="chip">PowerPoint</span>
+              <span class="chip">Excel</span>
+              <span class="chip">Cisco Packet Tracer</span>
+              <span class="chip">AutoCAD 2014</span>
+              <span class="chip">ledit</span>
+            </div>
+          </div>
+
+          <!-- Extra Curricular -->
+          <div class="skill-group" style="margin-top:0.5rem;">
+            <span class="skill-group-title">🧙 Extra Curricular</span>
+            <div class="chip-list">
+              <span class="chip">Dining Committee · Chess (2018)</span>
+              <span class="chip">Safety & Health Course (2020)</span>
+              <span class="chip">1Muird 1Sukan 1Malaysia (2011)</span>
+              <span class="chip">Youth House Committee (2010)</span>
+              <span class="chip">Arab Language Committee (2010)</span>
+              <span class="chip">Creative & Innovation Club</span>
+            </div>
           </div>
         </div>
       </div>
