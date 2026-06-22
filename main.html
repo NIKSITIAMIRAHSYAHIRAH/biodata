@@ -420,6 +420,51 @@
       border-radius: 0 8px 8px 0;
     }
 
+    /* Certifications styling */
+    .cert-item {
+      background: rgba(44, 35, 28, 0.08);
+      border-left: 3px solid #b48b5a;
+      padding: 0.4rem 0.8rem;
+      margin-bottom: 0.4rem;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.9rem;
+    }
+
+    .cert-item .cert-title {
+      font-weight: 600;
+      color: #2d1f0e;
+    }
+
+    .cert-item .cert-meta {
+      color: #5a4a34;
+      font-size: 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      margin-top: 0.1rem;
+    }
+
+    .cert-item .cert-meta span {
+      background: #3b2d1f;
+      color: #f2e1c7;
+      padding: 0.05rem 0.6rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+
+    .cert-item .cert-meta a {
+      color: #b48b5a;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.75rem;
+      transition: 0.2s;
+    }
+    .cert-item .cert-meta a:hover {
+      color: #f5d99b;
+      text-shadow: 0 0 15px #b48b5a;
+    }
+
     @media (max-width: 500px) {
       .magic-title { font-size: 1.8rem; flex-wrap: wrap; }
       .owl-badge { font-size: 1rem; padding: 0.3rem 1rem; }
@@ -478,14 +523,14 @@
       </div>
     </div>
 
-    <!-- RIGHT : education, experience, skills, awards -->
+    <!-- RIGHT : education, experience, certifications, skills, awards -->
     <div class="main-content">
 
-      <!-- EDUCATION - current on top with ⚡ Ongoing (no date) -->
+      <!-- EDUCATION -->
       <div class="parchment-box">
         <h4><i>📚</i> EDUCATION</h4>
         
-        <!-- Current Education - Ongoing (no 2024-current) -->
+        <!-- Current Education - Ongoing (no date) -->
         <div class="edu-item edu-current">
           <strong>🏛️ Universiti Malaysia Perlis (UniMAP)</strong> <br>
           <span style="color:#3a2a17;">ELECTRONIC SYSTEM, Electrical and Electronics Engineering</span>
@@ -509,6 +554,68 @@
         <div style="margin-top:0.7rem;">
           <span class="gold-medal">🏅 Gold Medal · Shoe Rack Innovation (2018)</span>
           <span class="gold-medal" style="margin-left:0.3rem;">🥈 NILAM Silver (2014)</span>
+        </div>
+      </div>
+
+      <!-- CERTIFICATIONS -->
+      <div class="parchment-box">
+        <h4><i>📜</i> CERTIFICATIONS · O.W.L.s</h4>
+        
+        <!-- Coursera - Network Security -->
+        <div class="cert-item">
+          <div class="cert-title">🔐 Network Security & Database Vulnerabilities</div>
+          <div class="cert-meta">
+            <span>Coursera</span>
+            <span>Issued Oct 2023</span>
+            <a href="https://www.credly.com/badges/cd1a6e7b-6f51-4510-a41b-865f57e10b1e/linked_in_profile" target="_blank">🔗 Verify</a>
+          </div>
+        </div>
+
+        <!-- Motorola Certifications -->
+        <div class="cert-item">
+          <div class="cert-title">📡 Radio Frequency (RF) Safety</div>
+          <div class="cert-meta">
+            <span>Motorola Solutions</span>
+            <span>Issued Oct 2023</span>
+            <span>ID: EHS0302</span>
+          </div>
+        </div>
+
+        <div class="cert-item">
+          <div class="cert-title">🔒 Intellectual Property Protection - Source Code and Technology</div>
+          <div class="cert-meta">
+            <span>Motorola Solutions</span>
+            <span>Issued Sep 2023</span>
+            <span>Expires Sep 2024</span>
+            <span>ID: ITS0072</span>
+          </div>
+        </div>
+
+        <div class="cert-item">
+          <div class="cert-title">🛡️ iProtect 101</div>
+          <div class="cert-meta">
+            <span>Motorola Solutions</span>
+            <span>Issued Mar 2023</span>
+            <span>ID: ITS2766</span>
+          </div>
+        </div>
+
+        <div class="cert-item">
+          <div class="cert-title">📶 Basic RF</div>
+          <div class="cert-meta">
+            <span>Motorola Solutions</span>
+            <span>Issued Mar 2023</span>
+            <span>ID: RDS0002</span>
+          </div>
+        </div>
+
+        <div class="cert-item">
+          <div class="cert-title">⚠️ Environmental Health & Safety Awareness and Hazard Communication</div>
+          <div class="cert-meta">
+            <span>Motorola Solutions</span>
+            <span>Issued May 2021</span>
+            <span>ID: EHS0027</span>
+          </div>
         </div>
       </div>
 
